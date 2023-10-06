@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gede Deva | Home</title>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- alpinejs -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs"></script>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/dda3bee8fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- google fonts: monserrat -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <style>
+      * {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="scroll-smooth">
+    <!-- navbar -->
+    <header class="w-full text-gray-700 bg-white">
+      <div
+        x-data="{ open: false }"
+        class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
+      >
+        <div class="p-4 flex flex-row items-center justify-between">
+          <a
+            href="#"
+            class="text-lg font-semibold tracking-widest text-gray-900 rounded-lg focus:outline-none focus:shadow-outline"
+          >
+            Gede <span class="text-blue-600">Deva</span>
+          </a>
+          <button
+            class="md:hidden rounded-lg focus:outline-none focus:shadow-outline"
+            @click="open = !open"
+          >
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path
+                x-show="!open"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+              <path
+                x-show="open"
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <nav
+          :class="{'flex': open, 'hidden': !open}"
+          class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row"
+        >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 duration-200 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="/"
+            >Home</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 duration-200 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="#skills"
+            >Skills</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 duration-200 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="#games"
+            >Games</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 duration-200 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="#contact"
+            >Contact</a
+          >
+          <a
+            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 duration-200 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+            href="shop.html"
+            >Shop</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- hero -->
+    <section class="text-gray-700 bg-white" id="about">
+      <div
+        class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row lg:px-28"
+      >
+        <div class="w-full mb-10 lg:w-5/6 lg:max-w-lg md:w-1/2 md:mb-0">
+          <img
+            class="object-cover object-center rounded-lg"
+            alt="hero"
+            src="./me.png"
+          />
+        </div>
+        <div
+          class="flex flex-col items-start text-left lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16"
+        >
+          <h1
+            class="mb-8 text-2xl font-bold tracking-tighter text-left text-black lg:text-5xl title-font"
+          >
+            Hi, I'm Dep
+          </h1>
+          <p
+            class="mb-8 text-base leading-relaxed text-left text-gray-700 lg:w-2/3"
+          >
+            Perkenalkan nama saya Gede Deva Brahmanda Saputra, Saya berusia 19
+            tahun. Asal sekolah saya SMK Negeri 3 Singaraja dan saat ini sedang
+            kuliah di Universitas Pendidikan Ganesha (Undiksha) dengan jurusan
+            Teknik Informatika, yang terkait dengan produksi Ilmu Komputer
+            (Ilkom). Hobi utama saya adalah bermain game, yang menunjukkan minat
+            saya dalam dunia teknologi dan hiburan.
+          </p>
+          <div class="flex justify-center">
+            <a
+              href="#contact"
+              class="inline-flex px-6 py-2 text-lg text-white bg-blue-600 border-0 rounded focus:outline-none hover:bg-blue-700"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section -->
+    <section class="bg-gray-100 py-8" id="skills">
+      <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
+        <h1 class="text-4xl font-bold mb-4 text-center">Skills</h1>
+        <div class="flex justify-center gap-4">
+          <div class="bg-white rounded-lg shadow-lg py-6 px-6">
+            <img
+              src="./skills/computer.jpg"
+              alt="Computer Hardware"
+              class="h-24 mx-auto mb-4"
+            />
+            <h2 class="text-xl font-bold mb-2">Computer Hardware</h2>
+            <p class="text-gray-700 text-base">
+              Saya memiliki pengetahuan dasar tentang komputer, seperti bagian
+              komputer, cara kerja komputer, dan cara merakit komputer. Saya
+              juga mengetahui tentang komponen komputer seperti CPU, GPU, RAM,
+              dan lain-lain.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg py-6 px-6">
+            <img
+              src="./skills/ppt.png"
+              alt="Microsoft Office"
+              class="h-24 mx-auto mb-4"
+            />
+            <h2 class="text-xl font-bold mb-2">Microsoft Office</h2>
+            <p class="text-gray-700 text-base">
+              Saya memiliki pengetahuan dasar tentang Microsoft Office, seperti
+              Microsoft Word, Microsoft Excel, dan Microsoft Powerpoint. Saya
+              juga mengetahui tentang bagaimana cara menggunakan Microsoft
+              Office dengan baik dan benar.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg py-6 px-6">
+            <img
+              src="./skills/valorant.jpg"
+              alt="Games"
+              class="h-24 mx-auto mb-4"
+            />
+            <h2 class="text-xl font-bold mb-2">Games</h2>
+            <p class="text-gray-700 text-base">
+              Saya memiliki pengalaman bermain game sejak saya kecil. Saya juga
+              memiliki pengetahuan tentang game, seperti cara bermain, cara
+              menyusun strategi untuk memenangkan game, dan lain-lain.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- the games that I played -->
+    <section class="text-gray-700 bg-white" id="games">
+      <div class="container px-5 py-24 mx-auto">
+        <h1 class="text-4xl font-bold mb-8 text-center">Games I Played</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="./games/valo.jpg"
+              alt="Valorant"
+              class="h-64 w-full object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-xl font-bold mb-2">Valorant</h2>
+              <p class="text-gray-700 text-base">
+                Valorant adalah game FPS yang dikembangkan dan diterbitkan oleh
+                Riot Games. Game ini dirilis pada tanggal 2 Juni 2020 untuk
+                platform Microsoft Windows. Valorant adalah game free-to-play,
+                yang berarti pemain dapat mengunduh dan memainkan game ini
+                secara gratis.
+              </p>
+              <!-- peak rank -->
+              <div class="flex items-center mt-4 text-gray-700">
+                <i class="fas fa-trophy mr-2"></i>
+                <span>Peak Rank: Ascendant 2</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="./games/mlbb.jpg"
+              alt="Mobile Legends"
+              class="h-64 w-full object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-xl font-bold mb-2">Mobile Legends</h2>
+              <p class="text-gray-700 text-base">
+                Mobile Legends: Bang Bang adalah sebuah permainan MOBA yang
+                dirancang untuk ponsel. Permainan ini dikembangkan oleh Moonton,
+                sebuah perusahaan game yang berbasis di Singapura dan Shanghai,
+                Tiongkok. Permainan ini dirilis pada tanggal 11 Juli 2016 untuk
+                Android dan iOS.
+              </p>
+              <!-- peak rank -->
+              <div class="flex items-center mt-4 text-gray-700">
+                <i class="fas fa-trophy mr-2"></i>
+                <span>Peak Rank: Mythic Immortal</span>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="./games/cs2.webp"
+              alt="Counter Strike"
+              class="h-64 w-full object-cover"
+            />
+            <div class="p-6">
+              <h2 class="text-xl font-bold mb-2">Counter Strike</h2>
+              <p class="text-gray-700 text-base">
+                Counter-Strike adalah seri permainan video tembak-menembak orang
+                pertama yang merupakan modifikasi dari permainan Half-Life
+                buatan Valve Corporation. Permainan ini mempunyai versi berbayar
+                dan versi gratisan yang dikenal dengan sebutan CSO
+                (Counter-Strike Online).
+              </p>
+              <!-- peak rank -->
+              <div class="flex items-center mt-4 text-gray-700">
+                <i class="fas fa-trophy mr-2"></i>
+                <span>Peak Rank: Master Guardian 2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- videos -->
+      <div class="container px-5 py-24 mx-auto">
+        <h1 class="text-4xl font-bold mb-8 text-center">Videos</h1>
+        <div class="flex justify-center">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/5HFOgbE9mS8"
+              title="YouTube video player"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <div class="p-6">
+              <h2 class="text-xl font-bold mb-2">Valorant</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="text-gray-700 bg-white" id="contact">
+      <div class="container px-5 py-24 mx-auto flex flex-wrap items-center">
+        <div class="w-full max-w-xl mx-auto mb-10 md:mb-0">
+          <h1 class="text-4xl font-bold mb-8">Contact Me</h1>
+          <p class="text-gray-700 text-base mb-4">
+            <!-- position icon -->
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            Jl. Raya Keloncing, Desa Krobokan, Buleleng, Bali
+          </p>
+          <p class="text-gray-700 text-base mb-4">You can reach me on:</p>
+          <div class="flex">
+            <a
+              href="https://www.instagram.com/depzoldck/"
+              target="_blank"
+              class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded mr-4"
+            >
+              <i class="fab fa-instagram mr-2"></i>Instagram
+            </a>
+            <a
+              href="https://wa.me/+6282145541443"
+              target="_blank"
+              class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded mr-4"
+            >
+              <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+            </a>
+            <a
+              href="https://www.tiktok.com/@depaaa666"
+              target="_blank"
+              class="bg-black hover:bg-gray-900 text-white font-bold py-2 px-4 rounded"
+            >
+              <i class="fab fa-tiktok mr-2"></i>TikTok
+            </a>
+            <!-- gmail -->
+            <a
+              href="mailto:gededeva.id@gmail.com"
+              target="_blank"
+              class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded ml-4"
+            >
+              <i class="fas fa-envelope mr-2"></i>Gmail
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto py-6 px-4">
+        <div class="flex flex-wrap justify-between items-center">
+          <div class="w-full md:w-auto text-center md:text-left mb-4 md:mb-0">
+            <p>&copy; 2023 Dep. All rights reserved.</p>
+          </div>
+          <div class="w-full md:w-auto text-center md:text-right">
+            <a href="#" class="inline-block mx-4 hover:text-gray-400"
+              >Privacy Policy</a
+            >
+            <a href="#" class="inline-block mx-4 hover:text-gray-400"
+              >Terms of Use</a
+            >
+            <a href="#contact" class="inline-block mx-4 hover:text-gray-400"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
